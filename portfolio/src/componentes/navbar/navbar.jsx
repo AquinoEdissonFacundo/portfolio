@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './navbar.module.css'; // Estilos CSS
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000);
+    };
+    handleResize(); // Llamar a la función una vez al inicio para establecer el estado inicial
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,7 +32,7 @@ const Navbar = () => {
           Facundo <span>Toloza</span>
         </span>
       </div>
-      {window.innerWidth <= 1000 ? (
+      {isMobile ? (
         <>
           <button className={styles.menuButton} onClick={toggleMenu}>
             Menu

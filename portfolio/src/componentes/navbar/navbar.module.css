@@ -100,4 +100,7 @@
     z-index: 999;
     margin-top: 3em;
   }
+  .navbarSocial {
+    gap: 1em;
+  }
 }

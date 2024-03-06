@@ -15,9 +15,17 @@ const Navbar = () => {
         </span>
       </div>
       <div className={styles.navbarLinks}>
-        <a href='#about'>About</a>
+        <a href='#about'>Sobre mí</a>
         <a href='#projects'>Proyectos</a>
-        <a href='#cv'>Descargar CV</a>
+        <a href='#footer'>Contactame</a>
+
+        <a
+          href={`/CV_FacundoToloza.pdf`}
+          download='CV_FacundoToloza.pdf'
+          target='_blank'
+        >
+          Descargar CV
+        </a>
       </div>
       <div className={styles.navbarSocial}>
         <a href='https://github.com/AquinoEdissonFacundo' target='_blank'>

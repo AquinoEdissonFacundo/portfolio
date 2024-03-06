@@ -56,7 +56,7 @@ const Projects = () => {
   }, [projects]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='projects'>
       {projects.map((project, index) => (
         <motion.div
           key={index}

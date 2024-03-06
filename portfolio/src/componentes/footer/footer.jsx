@@ -1,9 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './footer.module.css'; // Asegúrate de tener un archivo CSS para estilos
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formDataToSend = {
+      ...formData,
+      to_name: 'aquinoedissonfacundo@gmail.com', // Cambia esto al correo al que quieras enviar los mensajes
+      from_name: formData.name,
+      reply_to: formData.email,
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICEID, // Aquí debes especificar el ID del servicio
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATEID,
+        formDataToSend,
+        import.meta.env.VITE_APP_EMAILJS_APIKEY
+      )
+
+      .then(
+        function (response) {
+          console.log('Mensaje enviado correctamente', response);
+        },
+        function (error) {
+          console.log('Error al enviar el mensaje', error);
+        }
+      );
+
+    // Limpiar los campos después del envío
+    setFormData({ name: '', email: '', message: '' });
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='footer'>
       <div className={styles.boxcontainer}>
         <div className={styles.box}>
           <h2>
@@ -26,7 +68,7 @@ const Footer = () => {
             <li>Me encanta la música</li>
             <li>Disfruto del cine</li>
             <li>Aprecio el arte</li>
-            <li>Apacionado por conocer</li>
+            <li>Apasionado por conocer</li>
           </ul>
         </div>
 
@@ -68,14 +110,31 @@ const Footer = () => {
         </div>
         <div className={styles.form}>
           <h2>Formulario</h2>
-          <form>
-            nombre
-            <input type='text' />
-            email
-            <input type='email' />
-            mensaje
-            <textarea></textarea>
-            <button>Enviar</button>
+          <form onSubmit={handleSubmit}>
+            <input
+              type='text'
+              name='name'
+              placeholder='Tu nombre'
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type='email'
+              name='email'
+              placeholder='Correo electrónico'
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name='message'
+              placeholder='Mensaje'
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button type='submit'>Enviar</button>
           </form>
         </div>
       </div>

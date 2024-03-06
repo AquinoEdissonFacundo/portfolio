@@ -13,9 +13,12 @@
 
 @font-face {
   font-family: 'MiFuente';
-  src: url('/EdwardianScriptITC.zip') format('woff');
+  src: url('/edwardianscriptitc.ttf') format('woff');
 }
-
+@font-face {
+  font-family: 'Vogue';
+  src: url('/Vogue Bold Italic.otf') format('woff');
+}
 /* Aquí definimos las Custom properties */
 :root {
   --negro: #393939;

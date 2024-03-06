@@ -4,11 +4,11 @@ import styles from './about.module.css';
 import Text from './text';
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='about'>
       <div className={styles.section}>
         <div className={styles.profilePicContainer}></div>
         <p className={styles.name}>
-          HOLA, SOY <Text />
+          <p>HOLA, SOY</p> <Text />
         </p>
         <p className={styles.description}>
           CREO FIRMEMENTE EN EL VALOR HUMANO, PRIORIZANDO LA EMPATÍA Y LA

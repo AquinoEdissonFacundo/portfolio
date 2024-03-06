@@ -129,7 +129,7 @@ ul li {
   height: 1em;
   display: flex;
   align-items: center;
-  font-family: 'Edwardian Script ITC', cursive;
+  font-family: 'MiFuente', cursive;
 }
 .name span {
   color: orange;

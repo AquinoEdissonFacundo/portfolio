@@ -1,0 +1,59 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+}
+
+.profilePic {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.navbarLinks {
+  display: flex;
+  align-items: center;
+}
+.navbarLinks a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.25em;
+}
+.navbarSocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-right: 2em;
+}
+.navbarSocial a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+.name {
+  font-size: 2.5em;
+  font-family: 'Edwardian Script ITC', cursive;
+}
+.name span {
+  color: orange;
+}
+@media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbarLinks {
+    margin: 1em;
+    justify-content: center;
+  }
+}

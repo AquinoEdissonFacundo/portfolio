@@ -1,0 +1,205 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 2em;
+  background: rgb(41, 40, 40);
+  width: 100%;
+}
+.boxcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5em;
+}
+.box {
+  width: calc(33.33% - 1em);
+  padding: 1em;
+  background-color: #838282;
+  color: #000000;
+  min-height: 200px;
+  max-height: 200px;
+  min-width: 300px;
+  max-width: 300px;
+}
+.containersect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.box h2 {
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  padding: 1em;
+  border-radius: 2em;
+  background-color: #00000069;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form input {
+  background: #3d3d3d;
+}
+.form textarea {
+  background: #3d3d3d;
+}
+.box h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box h2 img {
+  padding: 0.5em;
+  width: 3em;
+}
+.box ul {
+  flex-wrap: wrap; /* Permitir que las etiquetas se envuelvan en varias líneas */
+  gap: 0.3em; /* Espacio entre las etiquetas */
+}
+
+.box ul li {
+  display: inline-block;
+  background: #525352;
+  width: fit-content;
+  border-radius: 0.6em;
+  margin: 0.1em;
+  padding: 0.2em;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  border: 1px solid transparent; /* Establecer un borde transparente */
+  transition: border-color 0.3s; /* Agregar transición para el cambio de color del borde */
+}
+
+.box ul li:hover {
+  border-color: orange; /* Cambiar el color del borde al pasar el mouse */
+}
+
+.boxdescargar a {
+  width: 70%;
+  background-color: #525352;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3em;
+  border: 1px solid transparent; /* Establecer un borde transparente */
+  transition: border-color 0.3s; /* Agregar transición para el cambio de color del borde */
+}
+
+.boxdescargar a:hover {
+  border-color: orange; /* Cambiar el color del borde al pasar el mouse */
+}
+
+.boxdescargar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+}
+.boxdescargar img {
+  padding: 1em;
+  width: 4em;
+}
+.form h2 {
+  margin-bottom: 0.5em;
+}
+.name {
+  font-size: 6.3em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  font-family: 'Edwardian Script ITC', cursive;
+}
+.name span {
+  color: orange;
+  margin-left: 0.1em;
+}
+.form input[type='text'],
+.form input[type='email'],
+.form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.form button {
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 1em 0;
+  width: 60%;
+}
+
+.bottom p {
+  margin-top: 1em;
+  font-size: 1em;
+}
+.contfooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.namefooter {
+  display: flex;
+  font-size: 0.9em;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .boxcontainer {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containersect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .name {
+    font-size: 4.3em;
+  }
+  .form {
+    width: 20em;
+    margin-top: 1em;
+  }
+  .boxdescargar {
+    margin-top: 2em;
+  }
+}

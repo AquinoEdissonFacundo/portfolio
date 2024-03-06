@@ -1,0 +1,127 @@
+.container {
+  padding: 107px 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 80vh;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding: 0 20px; /* Agregar padding horizontal */
+}
+
+.name {
+  font-size: 2em;
+  color: orange;
+  margin-bottom: 1em;
+  display: flex;
+  width: 100%;
+  gap: 0.3em;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.description {
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 2em;
+}
+
+.icon {
+  margin: 0 10px;
+}
+
+.profilePicContainer {
+  order: 2;
+  margin-left: auto; /* Mueve la imagen hacia la derecha */
+  width: 30%;
+}
+
+.profilePic {
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: filter 0.3s, width 0.3s; /* Agregar la transición para el cambio de tamaño */
+  width: 25em;
+  position: relative; /* Hacer que el contenido generado sea relativo a la imagen */
+}
+
+.profilePic:hover {
+  filter: grayscale(10%);
+  width: 30em;
+  filter: drop-shadow(0 0 0 10px orange);
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px */
+
+@media (max-width: 1000px) {
+  .name {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1em;
+    justify-content: center;
+    text-align: center;
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+  .container {
+    padding: 40px 18px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+  }
+  .name {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 2em;
+  }
+  .description {
+    padding: 1em;
+    font-size: 1em;
+    text-align: center;
+  }
+  .section {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3em;
+    width: 100%;
+    padding: 0;
+  }
+  .profilePic {
+    width: 20em;
+  }
+  .profilePic:hover {
+    width: 25em;
+  }
+}
+
+@media (max-width: 768px) {
+  .profilePicContainer {
+    order: 1;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+}

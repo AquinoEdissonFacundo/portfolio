@@ -91,9 +91,11 @@
     border: 2px solid rgba(0, 0, 0, 0.125);
     flex-direction: column;
     margin: 2em;
-    box-shadow: 0 4px 6px 5px rgb(199 199 199 / 46%);
+    box-shadow: 0 4px 6px 5px rgb(2 2 2 / 46%);
   }
-
+  .text {
+    width: 80%;
+  }
   .imageContainer {
     max-width: 100%;
     width: 100%;
@@ -103,6 +105,10 @@
   }
   .h2text {
     line-height: 1em;
+    font-size: 1.1em;
+  }
+  .descriptionp {
+    font-size: 0.7em;
   }
   .reversecontainer {
     flex-direction: column-reverse;

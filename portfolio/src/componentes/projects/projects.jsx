@@ -90,7 +90,7 @@ const Projects = () => {
           </div>
           <div className={styles.text}>
             <h2 className={styles.h2text}>{project.title}</h2>
-            {project.description}
+            <p className={styles.descriptionp}>{project.description}</p>
           </div>
         </motion.div>
       ))}

@@ -98,6 +98,7 @@
     padding-left: 0;
     padding-right: 0;
     font-size: 2em;
+    min-height: 6em;
   }
   .description {
     padding: 1em;

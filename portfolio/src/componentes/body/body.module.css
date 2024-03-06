@@ -114,12 +114,12 @@ body {
   }
 
   .bodyh1 {
-    font-size: 3em; /* Reduce aún más el tamaño del título para dispositivos móviles pequeños */
+    font-size: 2em; /* Reduce aún más el tamaño del título para dispositivos móviles pequeños */
   }
 }
 
 @media (max-width: 1000px) {
   .bodyh1 {
-    font-size: 3em;
+    font-size: 2em;
   }
 }

@@ -45,7 +45,7 @@ const Footer = () => {
   };
 
   return (
-    <div className={styles.container} id='footer'>
+    <div className={styles.container}>
       <div className={styles.boxcontainer}>
         <div className={styles.box}>
           <h2>
@@ -108,7 +108,7 @@ const Footer = () => {
             <img src='/Linkedin.svg' alt='Linkedin' />
           </div>
         </div>
-        <div className={styles.form}>
+        <div className={styles.form} id='footer'>
           <h2>Formulario</h2>
           <form onSubmit={handleSubmit}>
             <input

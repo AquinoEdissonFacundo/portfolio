@@ -5,7 +5,7 @@ import Body from '../body/body';
 import About from '../about/about';
 import Projects from '../projects/projects';
 import Footer from '../footer/footer';
-const home = () => {
+const Home = () => {
   return (
     <div className={styles.homecontainer}>
       <Navbar />
@@ -17,4 +17,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './footer.module.css'; // Asegúrate de tener un archivo CSS para estilos
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.boxcontainer}>
@@ -87,4 +87,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

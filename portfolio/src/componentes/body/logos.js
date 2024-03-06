@@ -1,4 +1,4 @@
-const logos = [
+const Logos = [
   '/bxl-sass.svg',
   '/bxl-javascript.svg',
   '/bxl-react.svg',
@@ -10,4 +10,4 @@ const logos = [
   '/bxl-git.svg',
 ];
 
-export default logos;
+export default Logos;

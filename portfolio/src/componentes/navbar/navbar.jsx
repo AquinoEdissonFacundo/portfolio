@@ -39,7 +39,7 @@ const Navbar = () => {
           </button>
           {menuOpen && (
             <div className={styles.mobileMenu}>
-              <a href='#about'>Sobre mí</a>
+              <a href='#about'>Sobre mi</a>
               <a href='#projects'>Proyectos</a>
               <a href='#footer'>Contactame</a>
               <a

@@ -59,6 +59,9 @@
   opacity: 1;
   background-color: rgba(252, 248, 248, 0.5);
 }
+.hide {
+  display: none;
+}
 
 .githubLink {
   position: absolute;

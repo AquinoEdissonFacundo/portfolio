@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
+      title: 'AVI DELTA',
+      description: 'LANDING PAGE PARA SERVICIOS DE MASAJES...',
+      image: '/avi.png',
+      githubLink: 'https://avidelta.online/',
+      delay: 0.9,
+    },
+    {
       title: 'GLAMIFY E-COMMERCE',
       description: 'APLICACIÓN DE MODA DE ALTA COSTURA...',
       image: '/glamify.jpg',
@@ -79,13 +86,34 @@ const Projects = () => {
               className={styles.image}
             />
             <div className={styles.overlay}>
-              <a href={project.githubLink} className={styles.githubLink}>
+              <a
+                href={project.githubLink}
+                className={`${styles.githubLink} ${
+                  index === 0 ? styles.hide : ''
+                }`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <img
                   className={styles.icongithub}
                   src='GitHub.svg'
                   alt='github'
                 />
               </a>
+              {index === 0 && (
+                <a
+                  href='https://avidelta.online/'
+                  className={styles.githubLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <img
+                    className={styles.icongithub}
+                    src='site-alt.png'
+                    alt='web'
+                  />
+                </a>
+              )}
             </div>
           </div>
           <div className={styles.text}>
